@@ -126,8 +126,10 @@ function deleteNo() {
   const sli1 = calculator.displayValue.length - 1;
   if (calculator.displayValue.length === 1) {
     calculator.displayValue = '0';
+    calculator.firstOperand = parseFloat(calculator.displayValue);
   } else {
     calculator.displayValue = calculator.displayValue.slice(0, sli1);
+    calculator.firstOperand = parseFloat(calculator.displayValue);
   }
   console.log(calculator);
 }
