@@ -39,7 +39,8 @@ keys.addEventListener('click', function (e) {
   }
 
   if (y.classList.contains('delete')) {
-    console.log('delete', y.textContent);
+    deleteNo();
+    updateDisplay();
     return;
   }
 
@@ -118,5 +119,16 @@ function resetCalculator() {
   calculator.firstOperand = null;
   calculator.wiatingForSecondOperand = false;
   calculator.operator = null;
+  console.log(calculator);
+}
+
+function deleteNo() {
+  const sli2 = calculator.displayValue.length;
+  const sli1 = calculator.displayValue.length - 1;
+  if (calculator.displayValue.length === 1) {
+    calculator.displayValue = '0';
+  } else {
+    calculator.displayValue = calculator.displayValue.slice(sli1, sli2);
+  }
   console.log(calculator);
 }
