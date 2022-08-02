@@ -123,12 +123,11 @@ function resetCalculator() {
 }
 
 function deleteNo() {
-  const sli2 = calculator.displayValue.length;
   const sli1 = calculator.displayValue.length - 1;
   if (calculator.displayValue.length === 1) {
     calculator.displayValue = '0';
   } else {
-    calculator.displayValue = calculator.displayValue.slice(sli1, sli2);
+    calculator.displayValue = calculator.displayValue.slice(0, sli1);
   }
   console.log(calculator);
 }
