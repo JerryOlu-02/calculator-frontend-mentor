@@ -175,6 +175,7 @@ main {
 
 /* Keypads */
 .text--input--container > div > div {
+  cursor: pointer;
   justify-content: center;
   border-radius: 5px;
   font-size: large;
