@@ -19,6 +19,10 @@ updateDisplay();
 
 keys.addEventListener('click', function (e) {
   const y = e.target;
+  
+  if (y.classList.contains('text--input--container')) {
+    return;
+  }
 
   if (y.classList.contains('operator')) {
     handleOperator(y.textContent);
